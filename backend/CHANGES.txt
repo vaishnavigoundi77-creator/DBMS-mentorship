@@ -1,0 +1,5 @@
+BACKEND CHANGES (for the new frontend)
+1. DELETE /api/alumni/:id            admin delete; removes the mentor plus related requests, mentorships, sessions, feedback, skills (transaction, works with any FK rules)
+2. PATCH  /api/sessions/:id          reschedule; body { session_date: "YYYY-MM-DD HH:MM:SS" }
+3. GET    /api/alumni                now also returns email (admin table shows it)
+Everything else is unchanged. Run: npm install (only if node_modules missing), then npm run dev
